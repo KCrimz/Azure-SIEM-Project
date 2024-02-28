@@ -1,4 +1,4 @@
-<h1>SQL Database Project</h1>
+<h1>Azure SIEM project </h1>
 
 <h2>Description</h2>
 IN PROGRESS
