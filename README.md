@@ -25,9 +25,17 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <h2>Lab:</h2> 
 
 <p>make an Azure Account to get started. Then we are going to create a VM and disable the external and windows firewall to essentially create an Easy honeypot for attackers so we can get some data going. </p>
+<p> First Create a virtual machine  and name the resource group Honeypotlab. We will be putting everything under this resource group for deletion convenience later on. Use the setup below</p> 
+<img src="https://imgur.com/knYlKAd.gif"/>
 
-<p>Then we are going to create a logs analytics workspace in azure as our log repository which we can use to ingest/extract logs from our VM</p>
+<p>Then we go to the networking VM setup after skipping disk setup(leave as defaults). In the NIC setup security group go to advanced and create new. Delete the inbound rules and setup like so and Add. Hit OK to go back to networking. Select review and create/ create again in the bottom left to starup our honeypot VM. Obviously this is just for lab purposes and we wouldnt do this in a real enviornment!</p>
+<img src="https://imgur.com/gIpBSiE.gif"/>
+  
+<p>Now we are going to create a "logs analytics workspace" in azure as our log repository which we can use to ingest/extract logs from our VM.Remember when creating to put under our honeypot resource group. Name it whatever you like for instance details</p>
+<img src="https://imgur.com/SHGiWs8.gif"/>
 
 <p>Next we are going to setup azure sentinel(SIEM) to be able to map all this data to a geograpical map with the help of Powershell. This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
+
+<p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
 
 <p></p>
