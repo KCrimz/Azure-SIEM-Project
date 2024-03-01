@@ -39,7 +39,14 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>Back to log analystics workspace and the one we created. Go to virtual machines and Click on our honeypot then connect.</p>
 <img src="https://imgur.com/cU2jMaq.gif"/>
 
-<p>Next we are going to setup azure sentinel(SIEM) to be able to map all this data to a geograpical map with the help of Powershell. This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
+<p>Next we are going to setup microsoft sentinel(SIEM) to be able to map all this data to a geograpical map with the help of Powershell. ( I opened another tab for convenience while the VM connected to our log analytics workspace. Simple create a new microsoft sentinel and add our log analytics to it easy. Now lets go see if we can log into our VM if it is done deploying. Get the public IP address from the VM and then we are going to use remote desktop connection on your physical computer.I personally go into options and change the display size so its not my whole monitor for ease of use. Connect with the public IP and go to more choices if you have that option to login the the credentials you created at the beginning for the VM.If not simply just login ez. Accept the certificate warning and we should be in on our VM! nizeee.</p>
+<img src="https://imgur.com/baCywCp.gif"/>
+  
+  
+  
+<p>This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
+
+<p></p>
 
 <p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
 
