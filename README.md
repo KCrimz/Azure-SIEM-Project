@@ -64,8 +64,11 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>After a little bit of waiting you will see that our  Failed rdp log will start to return data </p>
 <img src="https://imgur.com/vFDxbOZ.gif"/>
 
-<p>Next we will Create the map for sentinel to represent all this data. In microsoft sentinel Go to workbooks>add workbook>edit>add at the bottom left>add query>   Then Copy and run this Query. CREDIT TO: felixcalderon7258 HELLA Appreciated! This query will seperate the raw data into custom fields as Azure no longer supports custom field creation/extraction. Now we have to query and parse the fields this way.</p>
+<p>Next we will Create the map for sentinel to represent all this data. In microsoft sentinel Go to workbooks>add workbook>edit>add at the bottom left>add query>   Then Copy and run this Query. CREDIT TO: felixcalderon7258 HELLA Appreciated! This query will seperate the raw data into custom fields as Azure no longer supports custom field creation/extraction. Now we have to query and parse the fields this way. Visualization option By MAP and size to FULL. Done editing</p>
 <img src="https://imgur.com/Qp3cJpg.gif"/>
+
+<p>Setup map settings as scene here </p>
+<img src="https://imgur.com/OAjB90X.gif"/>
 
 
 <p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
