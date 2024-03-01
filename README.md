@@ -64,6 +64,21 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>After a little bit of waiting you will see that our  Failed rdp log will start to return data </p>
 <img src="https://imgur.com/vFDxbOZ.gif"/>
 
+<p>Next we will Create the map for sentinel to represent all this data. In microsoft sentinel Go to workbooks>add workbook>edit>add at the bottom left>add query>   Then Copy and run this Query</p>
+<p>FAILED_RDP_WITH_GEO_CL 
+| extend username = extract(@"username:([^,]+)", 1, RawData),
+         timestamp = extract(@"timestamp:([^,]+)", 1, RawData),
+         latitude = extract(@"latitude:([^,]+)", 1, RawData),
+         longitude = extract(@"longitude:([^,]+)", 1, RawData),
+         sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData),
+         state = extract(@"state:([^,]+)", 1, RawData),
+         label = extract(@"label:([^,]+)", 1, RawData),
+         destination = extract(@"destinationhost:([^,]+)", 1, RawData),
+         country = extract(@"country:([^,]+)", 1, RawData)
+| where destination != "samplehost"
+| where sourcehost != ""
+| summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country</p>
+
 <p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
 
 <p></p>
