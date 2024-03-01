@@ -20,7 +20,7 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 
 - <b>Setting up and creating a honeypot for cyber attacks</b>
 - <b>Logging (RDP) and analyzing attacks in azure sentinel</b>
-- <b>Powershell to extract meta data from windows event viewer</b>
+- <b>Powershell to extract meta data from windows event viewer with a third part API for geopgrapical data to log</b>
 
 <h2>Lab:</h2> 
 
