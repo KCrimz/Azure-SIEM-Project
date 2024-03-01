@@ -51,6 +51,9 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 
  <p> Go Here to get a custom Powershell log exporter for the information we will need to get for SIEM later https://github.com/joshmadakor1/Sentinel-Lab/blob/main/Custom_Security_Log_Exporter.ps1 Open powershell ISE as admin on your VM so we can run scripts. New, paste the script we just got and save it on desktop as log_exporter. Now go to https://ipgeolocation.io/ on your VM. THis will help us Translate the IP address over to actual locations in the world. Signup on your VM and go to your dashboard. Get your API Key and place that in the API Key field on the Log Exporter file for powershell named $API_KEY. Save the file  </p> 
 <img src="https://imgur.com/Kwqc05A.gif"/>
+
+<p>The power shell script is not of my creation and HUGE SHoutout to Josh Madakor for making it. Essentially this script allows you to get event meta data from event viewer in windows (IPaddresses) and get the Geographical data from the 3rd party API ipgeolocation. Then it creates a logfile in "C:\ProgramData\ if one doesnt exist in the VM which will then be used in log analytics to create a custom based log for out SIEM (microsoft sentinel) to map out the locations on a World Map. Run the script in powershell. The script goes through event viewer and looks for the failed logins (event ID 4625)</p>
+<img src="https://imgur.com/kaX8Uhn.gif"/>
   
 <p>This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
 
