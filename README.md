@@ -17,15 +17,17 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 - <b>Honeypot</b>
 
 <h2>Skills:</h2> 
+
 - <b>Setting up and creating a honeypot for cyber attacks</b>
 - <b>Logging (RDP) and analyzing attacks in azure sentinel</b>
 - <b>Powershell to extract meta data from windows event viewer</b>
 
 <h2>Lab:</h2> 
-- <p>make an Azure Account to get started. Then we are going to create a VM and disable the external and windows firewall to essentially create an Easy honeypot for attackers so we can get some data going. </p>
 
-- <p>Then we are going to create a logs analytics workspace in azure as our log repository which we can use to ingest/extract logs from our VM</p>
+<p>make an Azure Account to get started. Then we are going to create a VM and disable the external and windows firewall to essentially create an Easy honeypot for attackers so we can get some data going. </p>
 
-- <p>Next we are going to setup azure sentinel(SIEM) to be able to map all this data to a geograpical map with the help of Powershell. This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
+<p>Then we are going to create a logs analytics workspace in azure as our log repository which we can use to ingest/extract logs from our VM</p>
 
-- <p></p>
+<p>Next we are going to setup azure sentinel(SIEM) to be able to map all this data to a geograpical map with the help of Powershell. This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
+
+<p></p>
