@@ -31,8 +31,13 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>Then we go to the networking VM setup after skipping disk setup(leave as defaults). In the NIC setup security group go to advanced and create new. Delete the inbound rules and setup like so and Add. Hit OK to go back to networking. Select review and create/ create again in the bottom left to starup our honeypot VM. Obviously this is just for lab purposes and we wouldnt do this in a real enviornment!</p>
 <img src="https://imgur.com/gIpBSiE.gif"/>
   
-<p>Now we are going to create a "logs analytics workspace" in azure as our log repository which we can use to ingest/extract logs from our VM.Remember when creating to put under our honeypot resource group. Name it whatever you like for instance details</p>
+<p>Now we are going to create a "logs analytics workspace" in azure as our log repository which we can use to ingest/extract logs from our VM.Remember when creating to put under our honeypot resource group. Name it whatever you like for instance details. Review+create/Create</p>
 <img src="https://imgur.com/SHGiWs8.gif"/>
+
+<p>The next step is going to Microsoft defender for cloud so we can get logs from the VM into the log analytics workspace. Go into environment settings and click on the log analytics workspace we just made. You may need to refresh or wait for the full deployment for it to show. Servers ON SQL servers OFF Save, this may take a min. Go to data collection and choose all events save.</p>
+
+<p>Back to log analystics workspace and the one we created. Go to virtual machines and Click on our honeypot then connect.</p>
+<img src="https://imgur.com/cU2jMaq.gif"/>
 
 <p>Next we are going to setup azure sentinel(SIEM) to be able to map all this data to a geograpical map with the help of Powershell. This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
 
