@@ -1,7 +1,7 @@
 <h1>Azure SIEM project </h1>
 
 <h2>Description</h2>
-We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Information and Event Management tool) with a honeypot to monitor realtime Cyber attacks. We are going to then take those attacks and logs and display them on a world map to show Source geographical locations of these attacks. Using powershell to extract metdata  from windows into a third party API, Configure log analytics into azure workspace to get geographical locations, and configure Microsoft sentinel workbook to display RDP / attack data on a world map.
+We are going to Setup Microsoft SENTINEL which is Microsoft azure SIEM (Security Information and Event Management tool) with a honeypot to monitor realtime Cyber attacks. We are going to then take those attacks and logs and display them on a world map to show Source geographical locations of these attacks. Using powershell to extract metdata  from windows into a third party API, Configure log analytics into azure workspace to get geographical locations, and configure Microsoft sentinel workbook to display RDP / attack data on a world map.
 <br />
 
 
