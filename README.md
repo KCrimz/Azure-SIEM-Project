@@ -61,7 +61,8 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <img src="https://imgur.com/wVZiFSU.gif"/>
 
 
-<p></p>
+<p>After a little bit of waiting you will see that our  Failed rdp log will start to return data </p>
+<img src="https://imgur.com/vFDxbOZ.gif"/>
 
 <p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
 
