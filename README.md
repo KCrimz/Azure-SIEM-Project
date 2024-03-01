@@ -39,9 +39,12 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>Back to log analystics workspace and the one we created. Go to virtual machines and Click on our honeypot then connect.</p>
 <img src="https://imgur.com/cU2jMaq.gif"/>
 
-<p>Next we are going to setup microsoft sentinel(SIEM) to be able to map all this data to a geograpical map with the help of Powershell. ( I opened another tab for convenience while the VM connected to our log analytics workspace. Simple create a new microsoft sentinel and add our log analytics to it easy. Now lets go see if we can log into our VM if it is done deploying. Get the public IP address from the VM and then we are going to use remote desktop connection on your physical computer.I personally go into options and change the display size so its not my whole monitor for ease of use. Connect with the public IP and go to more choices if you have that option to login the the credentials you created at the beginning for the VM.If not simply just login ez. Accept the certificate warning and we should be in on our VM! nizeee.</p>
+<p>Next we are going to setup microsoft sentinel(SIEM) to be able to map all this data to a geograpical map with the help of Powershell. ( I opened another tab for convenience while the VM connected to our log analytics workspace. Simple create a new microsoft sentinel and add our log analytics to it easy. Now lets go see if we can log into our VM if it is done deploying. Get the public IP address from the VM and then we are going to use remote desktop connection on your physical computer.I personally go into options and change the display size so its not my whole monitor for ease of use. Connect with the public IP and go to more choices if you have that option to login the the credentials you created at the beginning for the VM.If not simply just login ez. Accept the certificate warning and we should be in on our VM! nizeee. Say no to all microsoft setup options bc they arent needed. Say yes to Network connection on the side if prompted</p>
 <img src="https://imgur.com/baCywCp.gif"/>
-  
+
+<p>Now go to event viewer. Open windows logs/secruity and we are going to be focusing on Audit failures. We can create some of these by going to our Physical computer and using remote desktop connection and intentional do false passwords for logins. I did it a few times to create Failed audit in Event viewer </p>
+<img src="https://imgur.com/LZJ1MJ2.gif"/>
+<img src="https://imgur.com/fGkaTA3.gif"/>
   
   
 <p>This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
