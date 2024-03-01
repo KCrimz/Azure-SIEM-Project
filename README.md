@@ -67,14 +67,14 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>Next we will Create the map for sentinel to represent all this data. In microsoft sentinel Go to workbooks>add workbook>edit>add at the bottom left>add query>   Then Copy and run this Query</p>
 <p>FAILED_RDP_WITH_GEO_CL </p>
 <p>| extend username = extract(@"username:([^,]+)", 1, RawData),</p>
-        <p> timestamp = extract(@"timestamp:([^,]+)", 1, RawData),</p>
-        <p> latitude = extract(@"latitude:([^,]+)", 1, RawData),</p>
-        <p> longitude = extract(@"longitude:([^,]+)", 1, RawData),</p>
-        <p> sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData),</p>
-        <p> state = extract(@"state:([^,]+)", 1, RawData),</p>
-        <p> label = extract(@"label:([^,]+)", 1, RawData),</p>
-        <p> destination = extract(@"destinationhost:([^,]+)", 1, RawData),</p>
-        <p> country = extract(@"country:([^,]+)", 1, RawData)</p>
+<p>         timestamp = extract(@"timestamp:([^,]+)", 1, RawData),</p>
+<p>         latitude = extract(@"latitude:([^,]+)", 1, RawData),</p>
+<p>         longitude = extract(@"longitude:([^,]+)", 1, RawData),</p>
+<p>         sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData),</p>
+<p>         state = extract(@"state:([^,]+)", 1, RawData),</p>
+<p>         label = extract(@"label:([^,]+)", 1, RawData),</p>
+<p>         destination = extract(@"destinationhost:([^,]+)", 1, RawData),</p>
+<p>         country = extract(@"country:([^,]+)", 1, RawData)</p>
 <p>| where destination != "samplehost"</p>
 <p>| where sourcehost != ""</p>
 <p>| summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country</p>
