@@ -64,20 +64,9 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>After a little bit of waiting you will see that our  Failed rdp log will start to return data </p>
 <img src="https://imgur.com/vFDxbOZ.gif"/>
 
-<p>Next we will Create the map for sentinel to represent all this data. In microsoft sentinel Go to workbooks>add workbook>edit>add at the bottom left>add query>   Then Copy and run this Query</p>
-<p>FAILED_RDP_WITH_GEO_CL </b>
-<b>| extend username = extract(@"username:([^,]+)", 1, RawData),</b>
-<b>         timestamp = extract(@"timestamp:([^,]+)", 1, RawData),</b>
-<b>         latitude = extract(@"latitude:([^,]+)", 1, RawData),</b>
-<b>         longitude = extract(@"longitude:([^,]+)", 1, RawData),</b>
-<b>         sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData),</b>
-<b>         state = extract(@"state:([^,]+)", 1, RawData),</b>
-<b>         label = extract(@"label:([^,]+)", 1, RawData),</b>
-<b>         destination = extract(@"destinationhost:([^,]+)", 1, RawData),</b>
-<b>         country = extract(@"country:([^,]+)", 1, RawData)</b>
-<b>| where destination != "samplehost"</b>
-<b>| where sourcehost != ""</b>
-<b>| summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country</b>
+<p>Next we will Create the map for sentinel to represent all this data. In microsoft sentinel Go to workbooks>add workbook>edit>add at the bottom left>add query>   Then Copy and run this Query. CREDIT TO: felixcalderon7258 HELLA Appreciated! This query will seperate the raw data into custom fields as Azure no longer supports custom field creation/extraction. Now we have to query and parse the fields this way.</p>
+<img src="https://imgur.com/Qp3cJpg.gif"/>
+
 
 <p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
 
