@@ -1,7 +1,7 @@
 <h1>Azure SIEM project </h1>
 
 <h2>Description</h2>
-We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Information and Event Management tool) with a honeypot to monitor realtime Cyber attacks. We are going to then take those attacks and logs and display them on a world map to show Source geographical locations of these attacks. Using powershell to extract metdata  from windows into a third party API, Configure log analytics into azure workspace to get geographical locations, and configure Azure sentinel workbook to display RDP / attack data on a world map.
+We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Information and Event Management tool) with a honeypot to monitor realtime Cyber attacks. We are going to then take those attacks and logs and display them on a world map to show Source geographical locations of these attacks. Using powershell to extract metdata  from windows into a third party API, Configure log analytics into azure workspace to get geographical locations, and configure Microsoft sentinel workbook to display RDP / attack data on a world map.
 <br />
 
 
@@ -67,10 +67,11 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>Next we will Create the map for sentinel to represent all this data. In microsoft sentinel Go to workbooks>add workbook>edit>add at the bottom left>add query>   Then Copy and run this Query. CREDIT TO: felixcalderon7258 HELLA Appreciated! This query will seperate the raw data into custom fields as Azure no longer supports custom field creation/extraction. Now we have to query and parse the fields this way. Visualization option By MAP and size to FULL. Done editing</p>
 <img src="https://imgur.com/Qp3cJpg.gif"/>
 
-<p>Setup map settings as scene here </p>
+<p>Setup map settings as scene here then save and close the map options. Then save the workbook as Failed_RDP_Worldmap with the same resource group and server you have been using for this whole lab. Apply! You can set auto refresh about ever 5-10min to see events update for regularly as others discover our VM.</p>
 <img src="https://imgur.com/OAjB90X.gif"/>
 
+<p>Make sure to keep the Powershell script in the VM running so it can collect real time data as events happen. You can do some more failed login attempts to your VM using different Login credentials to see how the map updates over time. YOu will Notice the longer you leave this on the more the Map lights up like a CHRISTMAS TREE LOL. </p>
 
 <p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
 
-<p></p>
+<p>LAB END!</p>
