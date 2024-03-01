@@ -65,19 +65,19 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <img src="https://imgur.com/vFDxbOZ.gif"/>
 
 <p>Next we will Create the map for sentinel to represent all this data. In microsoft sentinel Go to workbooks>add workbook>edit>add at the bottom left>add query>   Then Copy and run this Query</p>
-<p>FAILED_RDP_WITH_GEO_CL </p>
-<p>| extend username = extract(@"username:([^,]+)", 1, RawData),</p>
-<p>         timestamp = extract(@"timestamp:([^,]+)", 1, RawData),</p>
-<p>         latitude = extract(@"latitude:([^,]+)", 1, RawData),</p>
-<p>         longitude = extract(@"longitude:([^,]+)", 1, RawData),</p>
-<p>         sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData),</p>
-<p>         state = extract(@"state:([^,]+)", 1, RawData),</p>
-<p>         label = extract(@"label:([^,]+)", 1, RawData),</p>
-<p>         destination = extract(@"destinationhost:([^,]+)", 1, RawData),</p>
-<p>         country = extract(@"country:([^,]+)", 1, RawData)</p>
-<p>| where destination != "samplehost"</p>
-<p>| where sourcehost != ""</p>
-<p>| summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country</p>
+<p>FAILED_RDP_WITH_GEO_CL </b>
+<b>| extend username = extract(@"username:([^,]+)", 1, RawData),</b>
+<b>         timestamp = extract(@"timestamp:([^,]+)", 1, RawData),</b>
+<b>         latitude = extract(@"latitude:([^,]+)", 1, RawData),</b>
+<b>         longitude = extract(@"longitude:([^,]+)", 1, RawData),</b>
+<b>         sourcehost = extract(@"sourcehost:([^,]+)", 1, RawData),</b>
+<b>         state = extract(@"state:([^,]+)", 1, RawData),</b>
+<b>         label = extract(@"label:([^,]+)", 1, RawData),</b>
+<b>         destination = extract(@"destinationhost:([^,]+)", 1, RawData),</b>
+<b>         country = extract(@"country:([^,]+)", 1, RawData)</b>
+<b>| where destination != "samplehost"</b>
+<b>| where sourcehost != ""</b>
+<b>| summarize event_count=count() by latitude, longitude, sourcehost, label, destination, country</b>
 
 <p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
 
