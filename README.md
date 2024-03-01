@@ -7,7 +7,7 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>Azure/Azure Sentinel</b> 
+- <b>Azure/Microsoft Sentinel</b> 
 - <b>Powershell</b>
 
 <h2>Environments Used</h2>
@@ -19,7 +19,7 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <h2>Skills:</h2> 
 
 - <b>Setting up and creating a honeypot for cyber attacks</b>
-- <b>Logging (RDP) and analyzing attacks in azure sentinel</b>
+- <b>Logging (RDP) and analyzing attacks in microsoft sentinel</b>
 - <b>Powershell to extract meta data from windows event viewer with a third part API for geograpical data to log</b>
 
 <h2>Lab:</h2> 
