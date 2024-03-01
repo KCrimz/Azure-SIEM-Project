@@ -47,6 +47,7 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <img src="https://imgur.com/fGkaTA3.gif"/>
 
 <p>Now we are going to disable the firewall in our VM so more people can try to get into it on the web. We want all the event thingz to happen so we can plot them out geographically later. "wf.msc" search in your taskbar will give you the advanced firwall settings. Go to windows defender firewall Properties and turn off the Domain, private, and public profiles. Hit apply ok to turn everything off. BE CAREFUL TO DO THIS ONLY IN VM not on your actual PC </p>
+<img src="https://imgur.com/37LlU7I.gif"/>
 
   
   
