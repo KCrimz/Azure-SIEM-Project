@@ -49,9 +49,8 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 <p>Now we are going to disable the firewall in our VM so more people can try to get into it on the web. We want all the event thingz to happen so we can plot them out geographically later. "wf.msc" search in your taskbar will give you the advanced firwall settings. Go to windows defender firewall Properties and turn off the Domain, private, and public profiles. Hit apply ok to turn everything off. BE CAREFUL TO DO THIS ONLY IN VM not on your actual PC </p>
 <img src="https://imgur.com/37LlU7I.gif"/>
 
- <p> Go Here to get a custom Powershell log exporter for the information we will need to get for SIEM later https://github.com/joshmadakor1/Sentinel-Lab/blob/main/Custom_Security_Log_Exporter.ps1 Open powershell ISE as admin on your VM so we can run scripts. New, paste the script we just got and save it on desktop as log_exporter. Now go to https://ipgeolocation.io/ on your VM. THis will help us Translate the IP address over to actual locations in the world. Signup on your VM and go to your dashboard. Get your API Key and place that in the API Key field on the Log Exporter file for powershell named $API_KEY  </p> 
-<img src="https://imgur.com/mJWigzw.gif"/>
-<img src="https://imgur.com/xqJ4u1w.gif"/>
+ <p> Go Here to get a custom Powershell log exporter for the information we will need to get for SIEM later https://github.com/joshmadakor1/Sentinel-Lab/blob/main/Custom_Security_Log_Exporter.ps1 Open powershell ISE as admin on your VM so we can run scripts. New, paste the script we just got and save it on desktop as log_exporter. Now go to https://ipgeolocation.io/ on your VM. THis will help us Translate the IP address over to actual locations in the world. Signup on your VM and go to your dashboard. Get your API Key and place that in the API Key field on the Log Exporter file for powershell named $API_KEY. Save the file  </p> 
+<img src="https://imgur.com/Kwqc05A.gif"/>
   
 <p>This metadata will be sent to a third party API with the IP address to get the geographical information such as latitude and longitude. We will send this back to our VM to create a custom log with this information. </p>
 
