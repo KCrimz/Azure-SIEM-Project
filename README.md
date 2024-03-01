@@ -72,6 +72,6 @@ We are going to Setup azure SENTINEL which is Microsoft azure SIEM (Security Inf
 
 <p>Make sure to keep the Powershell script in the VM running so it can collect real time data as events happen. You can do some more failed login attempts to your VM using different Login credentials to see how the map updates over time. YOu will Notice the longer you leave this on the more the Map lights up like a CHRISTMAS TREE LOL. </p>
 
-<p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!</p>
+<p>Make sure to delete all resources after the lab to not eat up your free Money given during the trial period!Restrict RDP and setup only specific credentials in your networks!</p>
 
 <p>LAB END!</p>
